@@ -22,28 +22,30 @@
                     <span>Pro Member</span>
                 </div>
 
-                <div class="stats" id="streams">
-                    <!-- streams -->
-                    <img src="../img/twitch.png" alt="Twitch" class="logo">
-                    <h3>Streams</h3>
-                </div>
-                
-                <div class="stats" id="steam">
-                    <!-- games -->
-                    <img src="../img/steam.png" alt="Steam" class="logo">
-                    <h3>Games</h3>
-                </div>
-                
-                <div class="stats" id="upcoming">
-                    <!-- upcoming -->
-                    <img src="../img/upcoming.png" alt="Controller" class="logo">
-                    <h3>Upcoming</h3>
-                </div>
+                <div id="stats-container">
+                    <div class="stats" id="streams">
+                        <!-- streams -->
+                        <img src="../img/twitch.png" alt="Twitch" class="logo">
+                        <h3>Streams</h3>
+                    </div>
                     
-                <div class="stats" id="library">
-                    <!-- library -->
-                    <img src="../img/library.png" alt="library" class="logo">
-                    <h3>Library</h3>
+                    <div class="stats" id="steam">
+                        <!-- games -->
+                        <img src="../img/steam.png" alt="Steam" class="logo">
+                        <h3>Games</h3>
+                    </div>
+                    
+                    <div class="stats" id="upcoming">
+                        <!-- upcoming -->
+                        <img src="../img/upcoming.png" alt="Controller" class="logo">
+                        <h3>Upcoming</h3>
+                    </div>
+                        
+                    <div class="stats" id="library">
+                        <!-- library -->
+                        <img src="../img/library.png" alt="library" class="logo">
+                        <h3>Library</h3>
+                    </div>
                 </div>
                 <div id="promo">
                     <h3>Join pro for free games.</h3>
@@ -53,33 +55,39 @@
             <div id="games">
                 <div id="status">
                     <h1>Active Games</h1>
-                    <input type="text" placeholder="Search" id="search">
+                    <input type="text" placeholder="Search" id="search" autocomplete="off">
+                </div>
                     <div id="cards">
-                        <div class="card">
+                        <div class="card" id="spiderman">
                             <img src="../img/spiderman.png" alt="Spiderman" class="gameImg">
-                            <h2>Spider-Man: Miles-Morales</h2>
-                            <span class="version">PS5 Version</span>
-                            <div class="progress"></div>
-                            <div class="percentage">62%</div>
+                            <div class="card-info">
+                                <h2>Spider-Man: Miles-Morales</h2>
+                                <span class="version">PS5 Version</span>
+                                <div class="progress"></div>
+                            </div>
+                            <h2 class="percentage">62%</h2>
                         </div>
 
-                        <div class="card">
+                        <div class="card" id="gtaV">
                             <img src="../img/gtaV.png" alt="Spiderman" class="gameImg">
-                            <h2>Grand Theft Auto V</h2>
-                            <span class="version">PS4 Version</span>
-                            <div class="progress"></div>
-                            <div class="percentage">62%</div>
+                            <div class="card-info">
+                                <h2>Grand Theft Auto V</h2>
+                                <span class="version">PS4 Version</span>
+                                <div class="progress"></div>
+                            </div>
+                            <h2 class="percentage">19%</h2>
                         </div>
 
-                        <div class="card">
+                        <div class="card" id="cyberpunk">
                             <img src="../img/cyberpunk.png" alt="Spiderman" class="gameImg">
-                            <h2>Cyberpunk 2077</h2>
-                            <span class="version">PC Version</span>
-                            <div class="progress"></div>
-                            <div class="percentage">93%</div>
+                            <div class="card-info">
+                                <h2>Cyberpunk 2077</h2>
+                                <span class="version">PC Version</span>
+                                <div class="progress"></div>
+                            </div>
+                            <h2 class="percentage">93%</h2>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
     </main>

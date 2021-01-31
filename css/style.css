@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 /* poppins font */
 
+/* variables */
+:root{
+    --primary-green: #65dfc9;
+    --primary-blue: #6cdbeb;
+    --text-color: #3a517d;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -8,11 +15,30 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* variables */
-:root{
-    --primary-green: #65dfc9;
-    --primary-blue: #6cdbeb;
-    --text-color: #3a517d;
+/* sending the properties of some common tags */
+h1{
+    color: #426696;
+    font-weight: 800;
+    opacity: 0.8;
+    font-size: 2rem;
+}
+
+h2{
+    color: var(--text-color);
+    font-weight: 580;
+    opacity: 0.8;
+}
+
+h3{
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+span{
+    color: var(--text-color);
+    font-weight: 500;
+    opacity: 0.8;
 }
 
 /* the main screen */
@@ -40,6 +66,7 @@ main{
     /* setting the zindex so that circles are in background */
     backdrop-filter: blur(1.3rem);
     display: flex;
+    /* the flex positions the dashboard and the game section  */
 }
 
 /* setting properites of the circles */
@@ -68,120 +95,201 @@ main{
     left: 10%;
 }
 
+
+
+/* user dashboard properties */
+#dashboard{
+    display: flex;
+    flex: 1;
+    /* the flex decides the space covered by an item */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3)
+    );
+    border-radius: 2rem;
+}
+
+/* the user profile section */
+#user{
+    margin-top: 1.5rem;
+}
+
 /* the user picture */
 #profile{
     height: 70px;
     width: 70px;
 }
 
+/* the container containing all the stat panes */
+#stats-container{
+    margin: 1rem 0rem;
+}
+
+/* the statistics like streams and upcoming */
+.stats{
+    display: flex;
+    margin: 2rem;
+    align-items: center;
+}
+
+/* heading of stats */
+.stats h3{
+    padding: 0rem 1.3rem;
+}
+
+/* the logos of the stats */
 .logo{
     height: 33px;
     width: 33px;
 }
 
-.gameImg{
-    height: 100px;
-    
+/* promotion division */
+#promo{
+    background: linear-gradient(to right top, var(--primary-green), var(--primary-blue));
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    width: 82%;
+    align-items: center;
+    position: relative;
+    bottom: 2%;
 }
 
-#dashboard{
-    flex: 1;
+/* changing the properties of the controller */
+#promo img{
+    height: 120px;
+    position: relative;
+    left: 10%;
+    bottom: 5%;
+}
+
+/* the text of promotion */
+#promo h3{
+    width: 40%;
+    color: white;
+    font-weight: 650;
+    opacity: 1;
+}
+
+
+/* the games section */
+#games{
+    display: flex;
+    flex: 2;
+    /* the flex decides the space covered by an item */
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2rem 4rem;
+}
+
+/* the container containing heading and search */
+#status{
+    margin-bottom: 0.5rem;
+}
+
+/* the search field */
+#status input{
     background: linear-gradient(
     to right bottom,
     rgba(255,255,255,0.7),
     rgba(255,255,255,0.3)
     );
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    margin-top: 0.6rem;
     border-radius: 2rem;
+    width: 43%;
 }
 
-.stats{
-    display: flex;
-    margin: 17px 0px;
+#status input:focus{
+    outline: none;
+    border: 0.125rem solid var(--primary-blue);
+    margin-top: 0.33rem;
+    /* the top margin is reduced so that it does not affect the box size when focused */
 }
 
-.logo{
-   margin: 0px 23px;
-
+/* the image pictures */
+.gameImg{
+    height: 100px;
+    margin-right: 1.5rem;
+    /* margin to separate the info from the image */
 }
 
-#streams{
-    position: relative;
-    right: 11px;
-}
-
-#steam{
-    position: relative;
-    right: 14px;
-}
-
-#library{
-    position: relative;
-    right: 16px;
-}
-
-#user{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px ;
-}
-
-#user img{
-    margin:  20px 0px;
-}
-
-#user h2{
-    font-size: 20px;
-    color: var(--text-color);
-}
-
-#promo{
-    background: linear-gradient(to right top, var(--primary-green), var(--primary-blue));
-    border-radius: 2rem;
-    padding: 12px;
-    display: flex;
-}
-
-#promo img{
-    position: relative;
-    left: 4px;
-    bottom: 10px;
-}
-
-#promo h3{
-    width: 80px;
-    margin: 10px;
-    height: px;
-    color: white;
-    position: relative;
-    top: 24px;
-    left: 15px;
-}
-
-#games{
-    flex: 2;
-}
-
+/* the specific games */
 .card{
-    background: linear-gradient(91.29deg, rgba(255, 255, 255, 0.8) 0%, #FFFFFF 101.75%);
-    box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    background: linear-gradient(
+    to left top, 
+    rgba(255,255,255,0.8), 
+    rgba(255,255,255,0.5)
+    );
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 1rem;
+    box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+}
+
+/* the progress bar */
+.progress{
+    background: linear-gradient(to right top, var(--primary-green), var(--primary-blue));
+    width: 344px;
+    height: 20%;
     border-radius: 2rem;
-    margin: 12px;
-    display: grid;
+    position: relative;
+    /* position is set to relative so that the bar showing uncompletion doesnt flow away and just covers the progress bar */
+    overflow: hidden;
+    /* overflow is hidden so that the progress after which shows the uncompleted part doesnt move away from the original progress bar */
 }
 
-.card h2{
-    grid-area: heading;
+/* this after is created for the grey part above the bar depicting uncompleted game */
+.progress::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #D0D2D8;
+    position: absolute;
+    /* position is set to absolute so it appears in context of the progress bar */
 }
 
-.version{
-    display: block;
-    grid-area: version;
+/* fixing the progress of each and every game */
+/* spiderman progress bar */
+#spiderman .progress::after{
+    left: 62%;
 }
 
-#search{
-    border-radius: 2rem;
+/* gta 5 progress bar */
+#gtaV .progress::after{
+    left: 19%;
+}
+
+/* cyberpunk 2077 progress bar */
+#cyberpunk .progress::after{
+    left: 93%;
+}
+
+/* the info of games */
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* the percentage */
+.percentage{
+    font-weight: bold;
+    background: linear-gradient(to right top, var(--primary-green), var(--primary-blue));
+    -webkit-background-clip: text;
+    /* this command applies the background to just text... just like masking in Figma */
+    -webkit-text-fill-color: transparent;
+    /* it makes the actual color of the text transparent */
+    /* the webkits are used to give linear background to the text as usual css cannot do it */
+    /* webkits are used for modern css.... webkit is different for different browsers */
+    /* moz for mozilla and ms for internet explorer */
+    /* they do things which css cant do */
+    /* there are somethings in css which cant be fixed without webkit */
 }
